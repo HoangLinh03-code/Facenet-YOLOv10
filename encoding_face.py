@@ -10,13 +10,13 @@ from torchvision import transforms
 
 # Parse arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--dataset", required=True, help="path to the directory of faces and images")
-ap.add_argument("-e", "--encodings", required=True, help="path to the serialized db of facial encodings")
+ap.add_argument("-i", "--dataset", required=True, help="D:\\Clone\\New folder\\yolov10-and-facenet-pytorch\\dataset")
+ap.add_argument("-e", "--encodings", required=True, help="D:\\Clone\\New folder\\yolov10-and-facenet-pytorch\\encode.pickle")
 args = vars(ap.parse_args())
 
 # Load YOLO model
 print("[INFO] loading YOLO model for face detection...")
-yolo_model = YOLO("D:/AI_programing_lastterm/weight/best.pt")
+yolo_model = YOLO("D:/Clone/New folder/yolov10-and-facenet-pytorch/weight/best.pt")
 
 # Load FaceNet (InceptionResnetV1)
 print("[INFO] loading FaceNet model for face recognition...")
